@@ -8,14 +8,15 @@ workspace:
 steps:
   - name: report
     image: golang
-    volumes:
-      - name: reports
-        path: /var/reports
+#    volumes:
+#      - name: reports
+#        path: /var/reports
     commands:
-      - mkdir -p /var/reports
-      - go get
-      - go get github.com/360EntSecGroup-Skylar/goreporter
-      - goreporter -p ./ -f html -r /var/reports/
+       - echo "hello world"
+#      - mkdir -p /var/reports
+#      - go get
+#      - go get github.com/360EntSecGroup-Skylar/goreporter
+#      - goreporter -p ./ -f html -r /var/reports/
 
 #  - name: build
 #    image: golang
@@ -32,7 +33,7 @@ steps:
 #      - chmod +x output
 #      - ./output
 
-volumes:
-  - name: reports
-    host:
-      path: /home/dev/work/src/github.com/cyantarek/drone-go-git-test/reports
+#volumes:
+#  - name: reports
+#    host:
+#      path: /home/dev/work/src/github.com/cyantarek/drone-go-git-test/reports
